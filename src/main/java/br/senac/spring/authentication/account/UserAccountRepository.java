@@ -18,6 +18,5 @@ public interface UserAccountRepository extends CrudRepository<UserAccount, Integ
     default public void customize(QuerydslBindings bindings, QUserAccount root) {
 
         bindings.bind(root.fullName).first((StringPath path, String value) -> path.containsIgnoreCase(value));
-
     }
 }

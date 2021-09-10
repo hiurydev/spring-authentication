@@ -17,6 +17,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final String[] AUTH_WHITELIST = {
             "/account/*",
+            "/h2-console",
             "/h2-console/*"
     };
 

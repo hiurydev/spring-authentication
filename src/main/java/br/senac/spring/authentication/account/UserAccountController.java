@@ -28,7 +28,6 @@ public class UserAccountController {
         return ResponseEntity.ok(UserAccountRepresentation.ListaUserAccount.from(userAccountSaved));
     }
 
-
     @GetMapping
     public ResponseEntity<List<UserAccountRepresentation.ListaUserAccount>> getAllUserAccount(
             @QuerydslPredicate(root = UserAccount.class) Predicate predicate) {
@@ -51,5 +50,4 @@ public class UserAccountController {
         this.userAccountService.deleteUserAccount(id);
         return ResponseEntity.noContent().build();
     }
-
 }
